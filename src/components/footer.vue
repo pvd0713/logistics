@@ -34,6 +34,7 @@
   &__icons {
     display: flex;
     gap: 10px;
+    cursor: pointer;
   }
 }
 .copyright {
