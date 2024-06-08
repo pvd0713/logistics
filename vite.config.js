@@ -10,7 +10,7 @@ export default defineConfig({
   puplicPath: `/logistics/`,
   plugins: [
     vue(),
-    vueJsx()   
+    vueJsx()
     // VueDevTools(),
   ],
   resolve: {
