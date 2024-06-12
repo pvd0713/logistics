@@ -1,7 +1,6 @@
 <script setup>
 import Header from './components/header.vue'
 import Navigation from './components/navigation.vue'
-import Menu from './components/menu.vue'
 import Main from './components/main.vue'
 import Footer from './components/footer.vue'
 </script>
@@ -11,7 +10,6 @@ import Footer from './components/footer.vue'
     <Header />
     <div class="flex">
       <Navigation />
-      <Menu />
       <div class="lex-col w-full bg-[#F8F8F8]">
         <Main />
         <Footer />

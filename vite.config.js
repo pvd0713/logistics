@@ -7,7 +7,7 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  puplicPath: `/logistics/`,
+  base: `/logistics/`,
   plugins: [
     vue(),
     vueJsx()
