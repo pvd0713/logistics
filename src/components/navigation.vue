@@ -113,7 +113,7 @@ const selectBlock = (index) => {
       <li
         v-for="(item, index) in menuItems"
         :key="index"
-        class="item w-[185px] h-14 flex justify-start items-center pl-3 text-white hover:text-[#F69912]cursor-pointer transition-all"
+        class="item w-[185px] h-14 flex justify-start items-center pl-3 text-white hover:text-[#F69912] cursor-pointer transition-all"
         @click="selectMenuItem(index)"
       >
         {{ item.name }}
