@@ -319,6 +319,7 @@ const handlePageChange = (page) => {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow-y: auto;
 }
 
 .container {

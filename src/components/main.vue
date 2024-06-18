@@ -1,13 +1,11 @@
-<script lang="ts" setup>
-import Messages from './messages.vue';
-// import PaginationComponent from './PaginationComponent.vue';
+<script setup lang="ts">
+import Messages from './messages.vue'
 </script>
 
 <template>
   <div class="main w-full pt-7 pr-10 pb-2 pl-5">
     <div class="main__block bg-white w-full h-full rounded-lg">
-        <Messages />
-         <!-- <PaginationComponent /> -->
+      <Messages />
     </div>
   </div>
 </template>
