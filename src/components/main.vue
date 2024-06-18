@@ -1,11 +1,13 @@
 <script lang="ts" setup>
-// import Test from './test.vue';
+import Messages from './messages.vue';
+// import PaginationComponent from './PaginationComponent.vue';
 </script>
 
 <template>
   <div class="main w-full pt-7 pr-10 pb-2 pl-5">
     <div class="main__block bg-white w-full h-full rounded-lg">
-        <!-- <Test /> -->
+        <Messages />
+         <!-- <PaginationComponent /> -->
     </div>
   </div>
 </template>
