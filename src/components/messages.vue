@@ -2,7 +2,7 @@
 import { ref, computed } from 'vue'
 import NotificationList from './notificationList.vue'
 import MessageList from './message-list.vue'
-import Pagination from './pagination1.vue'
+import Pagination from './pagination.vue'
 
 const messages = ref([
   {

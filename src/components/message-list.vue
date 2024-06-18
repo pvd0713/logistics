@@ -21,15 +21,15 @@ defineProps({
       <div class="message-content">
         <div class="message-title">
           {{ message.title }}
-          <i class="icon attachments"></i>
+          <img class="icon attachments" src="/img/attachments.svg" alt="icon" />
         </div>
         <div class="message-company">{{ message.company }}</div>
       </div>
       <div class="message-subtitle">{{ message.subtitle }}</div>
       <div class="message-actions">
-        <i class="icon bookmark"></i>
-        <i class="icon email"></i>
-        <i class="icon delete"></i>
+        <img class="icon bookmark" src="/img/bookmark-icon.svg" alt="icon" />
+        <img class="icon email" src="/img/email-icon.svg" lt="icon" />
+        <img class="icon delete" src="/img/delete-icon.svg" lt="icon" />
       </div>
     </div>
   </div>
@@ -135,7 +135,7 @@ defineProps({
   background-position: center;
 }
 
-.icon.attachments {
+/* .icon.attachments {
   background-image: url('img/attachments.svg');
 }
 
@@ -149,5 +149,5 @@ defineProps({
 
 .icon.delete {
   background-image: url('img/delete-icon.svg');
-}
+} */
 </style>
