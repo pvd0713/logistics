@@ -1,9 +1,13 @@
 <script setup>
 import { ref, defineProps, defineEmits } from 'vue'
 
-defineProps({
+const props = defineProps({
   selectedCategory: {
     type: String,
+    required: true
+  },
+  messages: {
+    type: Array,
     required: true
   }
 })
@@ -11,20 +15,33 @@ defineProps({
 const emit = defineEmits(['selectItem'])
 
 const notifications = ref([
-  { category: 'Все', count: 25 },
-  { category: 'Сообщения', count: 10 },
-  { category: 'Запрос на сотрудничество', count: 5 },
-  { category: 'Проект договора', count: 2 },
-  { category: 'Заказ', count: 2 },
-  { category: 'Приложения', count: 1 },
-  { category: 'Заявка на отгрузку', count: 1 }
+  { category: 'Все' },
+  {
+    category: 'Сообщения',
+    count: props.messages.filter((item) => item.category === 'Сообщения').length
+  },
+  {
+    category: 'Запрос на сотрудничество',
+    count: props.messages.filter((item) => item.category === 'Запрос на сотрудничество').length
+  },
+  {
+    category: 'Проект договора',
+    count: props.messages.filter((item) => item.category === 'Проект договора').length
+  },
+  { category: 'Заказ', count: props.messages.filter((item) => item.category === 'Заказ').length },
+  {
+    category: 'Приложения',
+    count: props.messages.filter((item) => item.category === 'Приложения').length
+  },
+  {
+    category: 'Заявка на отгрузку',
+    count: props.messages.filter((item) => item.category === 'Заявка на отгрузку').length
+  }
 ])
 
 const selectItem = (category) => {
   emit('selectItem', category)
 }
-
-// console.log(selectedCategory)
 </script>
 
 <template>
@@ -37,7 +54,11 @@ const selectItem = (category) => {
       @click="selectItem(notification.category)"
     >
       <span>{{ notification.category }}</span>
-      <span class="count">{{ notification.count }}</span>
+      <span class="count">{{
+        index === 0
+          ? props.messages.length
+          : props.messages.filter((item) => item.category === notification.category).length
+      }}</span>
     </div>
   </div>
 </template>
@@ -73,7 +94,7 @@ const selectItem = (category) => {
 }
 
 .count {
-  background-color: #FFEFD6;
+  background-color: #ffefd6;
   border-radius: 50%;
   padding: 4px;
   height: 24px;

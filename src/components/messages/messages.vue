@@ -3,9 +3,22 @@ import { ref, computed } from 'vue'
 import NotificationList from './notificationList.vue'
 import MessageList from './message-list.vue'
 import Pagination from './pagination.vue'
+import CreateMessage from './create-message.vue'
+
+const props = defineProps(['activeIndex', 'activeBlock', 'isModalOpen', 'closeModal'])
+
+const handleFormSubmit = (form) => {
+  console.log('Form submitted:', form)
+  // handle form submission (e.g., send data to an API)
+}
+
+if (props.activeIndex === 0 && props.activeBlock === 0) {
+  ;('openModal')
+}
 
 const messages = ref([
   {
+    id: 1,
     time: '20:55',
     date: '17.10',
     title: 'Заявка на отгрузку',
@@ -14,6 +27,7 @@ const messages = ref([
     category: 'Заявка на отгрузку'
   },
   {
+    id: 2,
     time: '20:55',
     date: '17.10',
     company: 'ООО Главный',
@@ -22,6 +36,7 @@ const messages = ref([
     category: 'Запрос на сотрудничество'
   },
   {
+    id: 3,
     time: '20:55',
     date: '17.10',
     company: 'ООО Главный',
@@ -30,6 +45,7 @@ const messages = ref([
     category: 'Проект договора'
   },
   {
+    id: 4,
     time: '20:55',
     date: '17.10',
     company: 'ООО Главный',
@@ -38,6 +54,7 @@ const messages = ref([
     category: 'Заказ'
   },
   {
+    id: 5,
     time: '20:55',
     date: '17.10',
     company: 'ООО Главный',
@@ -46,6 +63,7 @@ const messages = ref([
     category: 'Приложения'
   },
   {
+    id: 6,
     time: '20:55',
     date: '17.10',
     company: 'ООО Главный',
@@ -54,6 +72,7 @@ const messages = ref([
     category: 'Заявка на отгрузку'
   },
   {
+    id: 7,
     time: '20:55',
     date: '17.10',
     company: 'ООО Главный',
@@ -62,6 +81,7 @@ const messages = ref([
     category: 'Заявка на отгрузку'
   },
   {
+    id: 8,
     time: '20:55',
     date: '17.10',
     company: 'ООО Главный',
@@ -70,6 +90,7 @@ const messages = ref([
     category: 'Заявка на отгрузку'
   },
   {
+    id: 9,
     time: '20:55',
     date: '17.10',
     company: 'ООО Главный',
@@ -78,6 +99,7 @@ const messages = ref([
     category: 'Заявка на отгрузку'
   },
   {
+    id: 10,
     time: '20:55',
     date: '17.10',
     company: 'ООО Главный',
@@ -86,6 +108,7 @@ const messages = ref([
     category: 'Заявка на отгрузку'
   },
   {
+    id: 11,
     time: '20:55',
     date: '17.10',
     company: 'ООО Главный',
@@ -94,6 +117,7 @@ const messages = ref([
     category: 'Заявка на отгрузку'
   },
   {
+    id: 12,
     time: '20:55',
     date: '17.10',
     company: 'ООО Главный',
@@ -102,6 +126,7 @@ const messages = ref([
     category: 'Заявка на отгрузку'
   },
   {
+    id: 13,
     time: '20:55',
     date: '17.10',
     company: 'ООО Главный',
@@ -110,6 +135,7 @@ const messages = ref([
     category: 'Запрос на сотрудничество'
   },
   {
+    id: 14,
     time: '20:55',
     date: '17.10',
     company: 'ООО Главный',
@@ -118,6 +144,7 @@ const messages = ref([
     category: 'Проект договора'
   },
   {
+    id: 15,
     time: '20:55',
     date: '17.10',
     company: 'ООО Главный',
@@ -126,6 +153,7 @@ const messages = ref([
     category: 'Заказ'
   },
   {
+    id: 16,
     time: '20:55',
     date: '17.10',
     company: 'ООО Главный',
@@ -134,6 +162,7 @@ const messages = ref([
     category: 'Приложения'
   },
   {
+    id: 17,
     time: '20:55',
     date: '17.10',
     title: 'Заявка на отгрузку',
@@ -142,6 +171,7 @@ const messages = ref([
     category: 'Заявка на отгрузку'
   },
   {
+    id: 18,
     time: '20:55',
     date: '17.10',
     company: 'ООО Главный',
@@ -150,6 +180,7 @@ const messages = ref([
     category: 'Запрос на сотрудничество'
   },
   {
+    id: 19,
     time: '20:55',
     date: '17.10',
     company: 'ООО Главный',
@@ -158,6 +189,7 @@ const messages = ref([
     category: 'Проект договора'
   },
   {
+    id: 20,
     time: '20:55',
     date: '17.10',
     company: 'ООО Главный',
@@ -166,6 +198,7 @@ const messages = ref([
     category: 'Заказ'
   },
   {
+    id: 21,
     time: '20:55',
     date: '17.10',
     company: 'ООО Главный',
@@ -174,6 +207,7 @@ const messages = ref([
     category: 'Приложения'
   },
   {
+    id: 22,
     time: '20:55',
     date: '17.10',
     company: 'ООО Главный',
@@ -182,6 +216,7 @@ const messages = ref([
     category: 'Заявка на отгрузку'
   },
   {
+    id: 23,
     time: '20:55',
     date: '17.10',
     company: 'ООО Главный',
@@ -190,6 +225,7 @@ const messages = ref([
     category: 'Заявка на отгрузку'
   },
   {
+    id: 24,
     time: '20:55',
     date: '17.10',
     company: 'ООО Главный',
@@ -198,6 +234,7 @@ const messages = ref([
     category: 'Заявка на отгрузку'
   },
   {
+    id: 25,
     time: '20:55',
     date: '17.10',
     company: 'ООО Главный',
@@ -206,6 +243,7 @@ const messages = ref([
     category: 'Заявка на отгрузку'
   },
   {
+    id: 26,
     time: '20:55',
     date: '17.10',
     company: 'ООО Главный',
@@ -214,6 +252,7 @@ const messages = ref([
     category: 'Заявка на отгрузку'
   },
   {
+    id: 27,
     time: '20:55',
     date: '17.10',
     company: 'ООО Главный',
@@ -222,6 +261,7 @@ const messages = ref([
     category: 'Заявка на отгрузку'
   },
   {
+    id: 28,
     time: '20:55',
     date: '17.10',
     company: 'ООО Главный',
@@ -230,6 +270,7 @@ const messages = ref([
     category: 'Заявка на отгрузку'
   },
   {
+    id: 29,
     time: '20:55',
     date: '17.10',
     company: 'ООО Главный',
@@ -238,6 +279,7 @@ const messages = ref([
     category: 'Запрос на сотрудничество'
   },
   {
+    id: 30,
     time: '20:55',
     date: '17.10',
     company: 'ООО Главный',
@@ -246,6 +288,7 @@ const messages = ref([
     category: 'Проект договора'
   },
   {
+    id: 31,
     time: '20:55',
     date: '17.10',
     company: 'ООО Главный',
@@ -254,6 +297,7 @@ const messages = ref([
     category: 'Заказ'
   },
   {
+    id: 32,
     time: '20:55',
     date: '17.10',
     company: 'ООО Главный',
@@ -300,16 +344,31 @@ const handleSelectItem = (category) => {
 const handlePageChange = (page) => {
   currentPage.value = page
 }
+
+const deleteMessage = (id) => {
+  messages.value = messages.value.filter((message) => message.id !== id)
+}
 </script>
 
 <template>
-  <div class="messages">
+  <div class="messages" v-if="props.activeIndex === 0 && props.activeBlock === 1">
     <div class="container">
-      <NotificationList @selectItem="handleSelectItem" :selectedCategory="selectedCategory" />
-      <MessageList :messages="filteredMessages" />
+      <NotificationList
+        @selectItem="handleSelectItem"
+        :selectedCategory="selectedCategory"
+        :messages="messages"
+      />
+      <MessageList :messages="filteredMessages" @deleteMessage="deleteMessage" />
     </div>
     <Pagination v-if="totalPages > 0" @pageChange="handlePageChange" :totalPages="totalPages" />
   </div>
+
+  <CreateMessage
+    v-if="isModalOpen"
+    :isOpen="isModalOpen"
+    @close="closeModal"
+    @submit="handleFormSubmit"
+  />
 </template>
 
 <style scoped>

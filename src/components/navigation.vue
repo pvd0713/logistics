@@ -1,6 +1,14 @@
 <script setup>
 import { ref } from 'vue'
 
+const props = defineProps([
+  'activeIndex',
+  'activeBlock',
+  'selectMenuItem',
+  'selectBlock',
+  'openModal'
+])
+
 const menuItems = ref([
   {
     name: 'Уведомления',
@@ -53,23 +61,29 @@ const menuItems = ref([
     submenu: []
   }
 ])
-const unreadCount = ref(10)
-const activeIndex = ref(null)
-const activeBlock = ref(null)
 
-const selectMenuItem = (index) => {
-  activeIndex.value = index
+const unreadCount = ref(10)
+
+const currentSelectBlock = (index) => {
+  if (props.activeIndex !== 0 || index !== 0) {
+    props.selectBlock(index)
+  } else {
+    props.openModal()
+  }
 }
 
-const selectBlock = (index) => {
-  activeBlock.value = index
+const currentSelectItem = (index) => {
+  props.selectMenuItem(index)
+  if (index === 0) {
+    props.selectBlock(1)
+  }
 }
 </script>
 
 <template>
   <div class="nav w-14 bg-[#727171] relative">
     <ul class="menu">
-      <li v-for="(item, index) in menuItems" :key="index" @click="selectMenuItem(index)">
+      <li v-for="(item, index) in menuItems" :key="index" @click="currentSelectItem(index)">
         <div class="w-14 h-14 flex justify-center items-center cursor-pointer transition-all">
           <div :class="['icon', { icon_active: index === activeIndex }]" v-html="item.icon"></div>
         </div>
@@ -89,7 +103,7 @@ const selectBlock = (index) => {
         v-for="(subItem, subIndex) in menuItems[activeIndex].submenu"
         :key="subIndex"
         class="item w-[185px] h-14 flex justify-start items-center pl-3 text-white hover:text-[#F69912] cursor-pointer transition-all relative"
-        @click="selectBlock(subIndex)"
+        @click="currentSelectBlock(subIndex)"
       >
         <div :class="{ subitem_active: activeBlock === subIndex }">{{ subItem }}</div>
 
@@ -114,12 +128,13 @@ const selectBlock = (index) => {
         v-for="(item, index) in menuItems"
         :key="index"
         class="item w-[185px] h-14 flex justify-start items-center pl-3 text-white hover:text-[#F69912] cursor-pointer transition-all"
-        @click="selectMenuItem(index)"
+        @click="currentSelectItem(index)"
       >
         {{ item.name }}
       </li>
     </ul>
   </div>
+  <!-- <button @click="openModal">{{ activeIndex }} {{ activeBlock }}</button> -->
 </template>
 
 <style scoped lang="scss">
@@ -133,6 +148,10 @@ const selectBlock = (index) => {
   font-style: normal;
   font-size: 14px;
   line-height: 20px;
+}
+
+.item:first-child {
+  cursor: default;
 }
 
 .notification-count {

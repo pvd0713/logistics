@@ -1,5 +1,5 @@
 <script setup>
-import { defineProps } from 'vue'
+import { defineProps, defineEmits } from 'vue'
 
 defineProps({
   messages: {
@@ -7,6 +7,12 @@ defineProps({
     required: true
   }
 })
+
+const emit = defineEmits(['deleteMessage'])
+
+const deleteMessage = (id) => {
+  emit('deleteMessage', id)
+}
 </script>
 
 <template>
@@ -29,7 +35,12 @@ defineProps({
       <div class="message-actions">
         <img class="icon bookmark" src="/img/bookmark-icon.svg" alt="icon" />
         <img class="icon email" src="/img/email-icon.svg" lt="icon" />
-        <img class="icon delete" src="/img/delete-icon.svg" lt="icon" />
+        <img
+          class="icon delete"
+          src="/img/delete-icon.svg"
+          lt="icon"
+          @click="deleteMessage(message.id)"
+        />
       </div>
     </div>
   </div>
