@@ -2,13 +2,13 @@
 
 <template>
   <header class="header relative z-10">
-    <div class="logo">
-      <img src="/img/arrow_back_gray.svg" alt="arrow" class="logo__arrow_back w-14" />
+    <div class="logo" @click="$router.push('/')">
+      <img src="@/assets/img/arrow_back_gray.svg" alt="arrow" class="logo__arrow_back w-14" />
       <h2 class="logo__name">ST <span class="logo__name__umpersand">&</span> L</h2>
     </div>
     <div class="menu">
       <p class="menu__title">Личный кабинет</p>
-      <img src="/img/arrow_down.svg" alt="arrow" class="menu__arrow_down" />
+      <img src="@/assets/img/arrow_down.svg" alt="arrow" class="menu__arrow_down" />
     </div>
   </header>
 </template>
