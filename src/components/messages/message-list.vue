@@ -27,17 +27,17 @@ const deleteMessage = (id) => {
       <div class="message-content">
         <div class="message-title">
           {{ message.title }}
-          <img class="icon attachments" src="/img/attachments.svg" alt="icon" />
+          <img class="icon attachments" src="@/assets/img/attachments.svg" alt="icon" />
         </div>
         <div class="message-company">{{ message.company }}</div>
       </div>
       <div class="message-subtitle">{{ message.subtitle }}</div>
       <div class="message-actions">
-        <img class="icon bookmark" src="/img/bookmark-icon.svg" alt="icon" />
-        <img class="icon email" src="/img/email-icon.svg" lt="icon" />
+        <img class="icon bookmark" src="@/assets/img/bookmark-icon.svg" alt="icon" />
+        <img class="icon email" src="@/assets/img/email-icon.svg" lt="icon" />
         <img
           class="icon delete"
-          src="/img/delete-icon.svg"
+          src="@/assets/img/delete-icon.svg"
           lt="icon"
           @click="deleteMessage(message.id)"
         />

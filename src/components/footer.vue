@@ -5,10 +5,10 @@
     <div class="about">
       <p class="about__title">Информация о нас</p>
       <div class="about__icons">
-        <img src="/img/telegram.svg" alt="icon" />
-        <img src="/img/vk.svg" alt="icon" />
-        <img src="/img/odnoklass.svg" alt="icon" />
-        <img src="/img/r.svg" alt="icon" />
+        <img src="@/assets/img/telegram.svg" alt="icon" />
+        <img src="@/assets/img/vk.svg" alt="icon" />
+        <img src="@/assets/img/odnoklass.svg" alt="icon" />
+        <img src="@/assets/img/r.svg" alt="icon" />
       </div>
     </div>
     <div class="copyright flex justify-center items-center">ST&L 2023</div>

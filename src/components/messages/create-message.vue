@@ -35,14 +35,14 @@ const handleSubmit = () => {
           <div class="form-group">
             <p for="to">Кому</p>
             <div class="input-container">
-              <img class="input-icon" src="/img/user.svg" alt="icon" />
+              <img class="input-icon" src="@/assets/img/user.svg" alt="icon" />
               <input id="to" v-model="form.to" type="text" class="input" />
             </div>
           </div>
           <div class="form-group">
             <p for="subject">Тема</p>
             <div class="input-container">
-              <img class="input-icon" src="/img/pencil.svg" alt="icon" />
+              <img class="input-icon" src="@/assets/img/pencil.svg" alt="icon" />
               <input id="subject" v-model="form.subject" type="text" class="input" />
             </div>
           </div>
@@ -50,8 +50,8 @@ const handleSubmit = () => {
 
         <div class="textarea-block">
           <h2 class="textarea-title">
-            <img src="/img/skrepka.svg" alt="icon" />
-            <img src="/img/flag.svg" alt="icon" />
+            <img src="@/assets/img/skrepka.svg" alt="icon" />
+            <img src="@/assets/img/flag.svg" alt="icon" />
           </h2>
           <textarea class="textarea" v-model="form.body" placeholder="Введите текст"> </textarea>
         </div>
