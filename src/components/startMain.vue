@@ -21,15 +21,17 @@
     </section>
 
     <section class="center about">
-      <div class="flex flex-col w-3/5 gap-y-14 py-20">
-        <h2>О КОМПАНИИ</h2>
-        <p>
-          <span>Smart Trade & Logistic</span> - разработчик системы, предназначенный для управления
-          торговлей и логистикой.
-        </p>
-      </div>
+      <div class="relative">
+        <div class="flex flex-col w-3/5 gap-y-14 py-20">
+          <h2>О КОМПАНИИ</h2>
+          <p>
+            <span>Smart Trade & Logistic</span> - разработчик системы, предназначенный для
+            управления торговлей и логистикой.
+          </p>
+        </div>
 
-      <img src="@/assets/img/map.jpg" alt="Country Map" />
+        <img src="@/assets/img/map.jpg" alt="Country Map" />
+      </div>
     </section>
 
     <section class="functionality center">
@@ -85,50 +87,118 @@
       </div>
     </section>
 
-    <section class="advantages">
+    <section class="advantages center">
       <h2>ПРЕИМУЩЕСТВА</h2>
       <div class="advantages-grid">
-        <div>Простота использования</div>
-        <div>Низкая стоимость использования</div>
-        <div>Высокая скорость и оперативность взаимодействия с другими клиентами</div>
-        <div>
-          Широкий функционал использования от поиска партнера до закрытия сделки, все участники
-          сделки
+        <div class="border-r-2 border-[rgba(0,0,0,0.2)] flex items-center gap-8">
+          <img class="w-10" src="@/assets/img/hand.svg" alt="icon" />
+          <p>Простота использования</p>
         </div>
-        <div>Интеграция с другими информационными системами</div>
-        <div>Быстрое внедрение</div>
+        <div class="flex items-center gap-8">
+          <img class="w-10" src="@/assets/img/rub.svg" alt="icon" />
+          <p>Низкая стоимость использования</p>
+        </div>
+        <div
+          class="border-r-2 border-b-2 border-t-2 border-[rgba(0,0,0,0.2)] flex items-center gap-8"
+        >
+          <img class="w-10" src="@/assets/img/clock.svg" alt="icon" />
+          <p>Высокая скорость и оперативность взаимодействия с другими клиентами</p>
+        </div>
+        <div class="border-t-2 border-b-2 border-[rgba(0,0,0,0.2)] flex items-center gap-8">
+          <img class="w-10 h-14" src="@/assets/img/filter.svg" alt="icon" />
+          <p>
+            Широкий функционал использования от поиска партнера до закрытия сделки, все участники
+            сделки
+          </p>
+        </div>
+        <div class="border-r-2 border-[rgba(0,0,0,0.2)] flex items-center gap-8">
+          <img class="w-10 object-none h-14" src="@/assets/img/list.svg" alt="icon" />
+          <p>Интеграция с другими информационными системами</p>
+        </div>
+        <div class="flex items-center gap-8">
+          <img class="w-10" src="@/assets/img/timeclock.svg" alt="icon" />
+          <p>Быстрое внедрение</p>
+        </div>
       </div>
     </section>
 
-    <section class="vacancies">
+    <section class="effectiveness center">
+      <div class="relative">
+        <h2>ЭФФЕКТИВНОСТЬ ВНЕДРЕНИЯ</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div>
+              <span>Рост объемов и эффективности</span> реализации или закупок товаров и услуг
+            </div>
+          </div>
+          <div class="w-28 flex justify-center relative">
+            <img src="@/assets/img/number1.svg" alt="icon" />
+            <div class="border border-[rgba(246,153,18,0.6)] h-[90px] absolute top-[155px]"></div>
+          </div>
+          <div class="timeline-item"></div>
+          <div class="timeline-item"></div>
+          <div class="w-28 flex justify-center relative">
+            <img src="@/assets/img/number2.svg" alt="icon" />
+            <div class="border border-[rgba(246,153,18,0.6)] h-[90px] absolute top-[155px]"></div>
+          </div>
+          <div class="timeline-item">
+            <div>
+              <span>Повышение скорости и оперативности</span> взаимодействия с другими клиентами
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div><span>Контроль и прозрачность</span> планирования и исполнения сделок</div>
+          </div>
+          <div class="w-28 flex justify-center relative">
+            <img src="@/assets/img/number3.svg" alt="icon" />
+            <div class="border border-[rgba(246,153,18,0.6)] h-[90px] absolute top-[155px]"></div>
+          </div>
+          <div class="timeline-item"></div>
+          <div class="timeline-item"></div>
+          <div class="w-28 flex justify-center relative">
+            <img src="@/assets/img/number4.svg" alt="icon" />
+            <div class="border border-[rgba(246,153,18,0.6)] h-[90px] absolute top-[155px]"></div>
+          </div>
+          <div class="timeline-item">
+            <div>
+              <span>Просмотр оперативной информации</span> при интеграция с другими информационными
+              системами, в том числе АС Этран на стороне грузоотправителя/получателя
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div><span>Централизация</span> потока инфрмации</div>
+          </div>
+          <div class="w-28 flex justify-center relative">
+            <img src="@/assets/img/number5.svg" alt="icon" />
+          </div>
+          <div class="timeline-item"></div>
+        </div>
+        <!-- <img
+          class="absolute top-[-200px] right-24 z-[-1]"
+          src="@/assets/img/Rectangle1.png"
+          alt="pic"
+        />
+        <img
+          class="absolute top-[200px] right-[-120px] z-[-1]"
+          src="@/assets/img/Rectangle2.png"
+          alt="pic"
+        /> -->
+      </div>
+    </section>
+
+    <section class="vacancies center">
       <h2>ВАКАНСИИ</h2>
       <p>
         К нам в команду требуются новые сотрудники. Вы можете отправить своё резюме по адресу:
-        stl@mail.ru
+        <span>stl@mail.ru</span>
       </p>
     </section>
 
-    <section class="effectiveness">
-      <h2>ЭФФЕКТИВНОСТЬ ВНЕДРЕНИЯ</h2>
-      <ul>
-        <li>Рост объемов и эффективности реализации или закупок товаров и услуг</li>
-        <li>Повышение скорости и оперативности взаимодействия с другими клиентами</li>
-        <li>Контроль и прозрачность планирования и исполнения сделок</li>
-        <li>
-          Просмотр оперативной информации при интеграции с другими информационными системами, в том
-          числе АС Этран на стороне грузоотправителя/получателя
-        </li>
-        <li>Централизация информации</li>
-      </ul>
-    </section>
+    <section class="footer bg-[#676767] h-[302px]"></section>
   </div>
 </template>
 
 <style scoped lang="scss">
-/* Import Montserrat Font */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-
-/* Container and Layout */
 .contain {
   font-family: 'Montserrat', sans-serif;
   color: #333;
@@ -146,6 +216,7 @@ header {
   border: none;
   height: 63px;
   background-color: #727171;
+  min-width: 1000px;
 }
 
 header h1 {
@@ -187,6 +258,7 @@ nav ul li {
 .hero {
   text-align: center;
   margin-bottom: 60px;
+  min-width: 1000px;
 }
 
 .hero img {
@@ -200,6 +272,7 @@ nav ul li {
   display: flex;
   position: relative;
   margin-bottom: 100px;
+  min-width: 1000px;
 
   h2 {
     font-family: 'Montserrat', sans-serif;
@@ -230,17 +303,18 @@ nav ul li {
 }
 
 .about img {
-  width: 55%;
+  width: 700px;
   height: auto;
   margin-top: 40px;
   position: absolute;
   z-index: -1;
   right: 0;
+  top: 0;
 }
 
 .functionality {
   margin-bottom: 160px;
-  
+
   h2 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
@@ -269,9 +343,9 @@ nav ul li {
   box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.25);
   min-height: 503px;
   position: relative;
-  min-width: 395px;
+  min-width: 328px;
 
-  div{
+  div {
     position: relative;
     flex-grow: 3;
     bottom: 0;
@@ -290,13 +364,14 @@ nav ul li {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 32px;
+  font-size: 30px;
   line-height: 39px;
   color: #f69912;
   text-decoration: underline;
   height: 78px;
   margin-bottom: 23px;
   margin-top: 27px;
+  letter-spacing: -1.5px;
 }
 
 .functionality-sections ol {
@@ -314,47 +389,110 @@ nav ul li {
   margin-bottom: 5px;
 }
 
-/* Advantages Section Styles */
 .advantages {
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 10px;
+  padding-left: calc(50% - 650px);
+  padding-right: calc(50% - 650px);
+  min-width: 1000px;
+  margin-bottom: 160px;
+
+  h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 50px;
+    line-height: 61px;
+    color: #000;
+    margin-bottom: 60px;
+    padding-left: 50px;
+  }
 }
 
 .advantages-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
 }
 
 .advantages-grid div {
-  background-color: #fff;
-  padding: 10px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding-top: 42px;
+  padding-bottom: 42px;
+  padding-left: 50px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 32px;
+  line-height: 39px;
 }
 
-/* Vacancies Section Styles */
-.vacancies {
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-/* Effectiveness Section Styles */
 .effectiveness {
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 10px;
+  margin-bottom: 160px;
+  min-width: 1000px;
+
+  h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 61px;
+    color: #000;
+    margin-bottom: 60px;
+    padding-left: 50px;
+  }
+
+  .timeline {
+    display: grid;
+    grid-template-columns: 4fr 1fr 4fr;
+    justify-items: center;
+    gap: 0px 25px;
+    min-width: 1000px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;
+    align-items: center;
+    text-align: center;
+    color: #000;
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 1);
+
+    span {
+      font-weight: 700;
+      color: #f69912;
+    }
+  }
 }
 
-.effectiveness ul {
-  list-style: disc;
-  padding-left: 20px;
-  color: #000;
+.vacancies {
+  margin-bottom: 160px;
+  min-width: 1000px;
+
+  h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 61px;
+    color: #000;
+    margin-bottom: 60px;
+  }
+
+  p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 39px;
+    color: #000;
+  }
+
+  span {
+    color: #f69912;
+    cursor: pointer;
+  }
 }
 
-.effectiveness ul li {
-  margin-bottom: 5px;
+.footer {
+  min-width: 1000px;
 }
 </style>
