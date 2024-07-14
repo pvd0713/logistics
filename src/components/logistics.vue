@@ -5,8 +5,10 @@ import Main from './main.vue'
 import Footer from './footer.vue'
 import { ref } from 'vue'
 
-const activeIndex = ref(null)
-const activeBlock = ref(null)
+const props = defineProps(['index', 'block'])
+
+const activeIndex = ref(props.index)
+const activeBlock = ref(props.block)
 
 const selectMenuItem = (index) => {
   activeIndex.value = index
@@ -32,7 +34,7 @@ const selectBlock = (index) => {
 <template>
   <div class="app">
     <Header />
-    <div class="flex">
+    <div class="flex h-[93%]">
       <Navigation
         :activeIndex="activeIndex"
         :activeBlock="activeBlock"
@@ -40,7 +42,7 @@ const selectBlock = (index) => {
         :selectBlock="selectBlock"
         :openModal="openModal"
       />
-      <div class="lex-col w-full bg-[#F8F8F8]">
+      <div class="flex-col w-full h-full bg-[#F8F8F8]">
         <Main
           :activeIndex="activeIndex"
           :activeBlock="activeBlock"
@@ -55,6 +57,6 @@ const selectBlock = (index) => {
 
 <style scoped>
 .app {
-  height: 100vh;
+  height: 97.7vh;
 }
 </style>

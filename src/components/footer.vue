@@ -1,7 +1,7 @@
 <script lang="ts" setup></script>
 
 <template>
-  <div class="footer h-10 w-full border border-[#E1E3E3] bg-white flex justify-between px-8">
+  <div class="footer h-[6%] w-full border border-[#E1E3E3] bg-white flex justify-between px-8">
     <div class="about">
       <p class="about__title">Информация о нас</p>
       <div class="about__icons">
@@ -22,6 +22,7 @@
   align-items: center;
   justify-content: center;
   gap: 2px;
+  height: 100%;
 
   &__title {
     font-family: 'Montserrat', sans-serif;
@@ -44,5 +45,21 @@
   font-size: 11px;
   line-height: 24px;
   color: #8e9192;
+}
+
+@media (max-width: 600px) {
+  .about {
+    &__title {
+      font-size: 8px;
+      line-height: 8px;
+    }
+
+    &__icons {
+      height: 10px;
+      display: flex;
+      gap: 10px;
+      cursor: pointer;
+    }
+  }
 }
 </style>

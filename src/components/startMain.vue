@@ -11,7 +11,7 @@
           <li>Преимущества</li>
           <li>Эффективность внедрения</li>
           <li>Вакансии</li>
-          <li><div class="enter" @click="$router.push('/logistics')">Вход</div></li>
+          <li><div class="enter" @click="$router.push('/logistics/messages')">Вход</div></li>
         </ul>
       </nav>
     </header>

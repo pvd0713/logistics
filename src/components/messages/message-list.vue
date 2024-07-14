@@ -1,5 +1,5 @@
 <script setup>
-import { defineProps, defineEmits } from 'vue'
+import { defineEmits } from 'vue'
 
 defineProps({
   messages: {
@@ -16,8 +16,8 @@ const deleteMessage = (id) => {
 </script>
 
 <template>
-  <div class="message-list">
-    <div class="message-item" v-for="(message, index) in messages" :key="index">
+  <div class="message-list" v-auto-animate>
+    <div class="message-item" v-for="message in messages" :key="message.id">
       <div class="message-info">
         <div>
           <div class="message-time">{{ message.time }}</div>
@@ -32,7 +32,7 @@ const deleteMessage = (id) => {
         <div class="message-company">{{ message.company }}</div>
       </div>
       <div class="message-subtitle">{{ message.subtitle }}</div>
-      <div class="message-actions">
+      <div class="message-actions" v-auto-animate>
         <img class="icon bookmark" src="@/assets/img/bookmark-icon.svg" alt="icon" />
         <img class="icon email" src="@/assets/img/email-icon.svg" lt="icon" />
         <img
