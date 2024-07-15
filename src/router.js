@@ -4,7 +4,7 @@ import Home from './components/startMain.vue'
 import Logistics from './components/logistics.vue'
 
 const routes = [
-  { path: '/', component: Home },
+  { path: '/logistics', component: Home },
   { path: '/logistics/messages', component: Logistics, props: { index: 0, block: 1 } },
   { path: '/logistics/supply', component: Logistics, props: { index: 1 } },
   { path: '/logistics/road', component: Logistics, props: { index: 2 } },

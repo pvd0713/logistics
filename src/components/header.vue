@@ -2,7 +2,7 @@
 
 <template>
   <header class="header relative z-10">
-    <div class="logo" @click="$router.push('/')">
+    <div class="logo" @click="$router.push('/logistics')">
       <img src="@/assets/img/arrow_back_gray.svg" alt="arrow" class="logo__arrow_back w-14" />
       <h2 class="logo__name">ST <span class="logo__name__umpersand">&</span> L</h2>
     </div>
